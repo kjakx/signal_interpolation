@@ -7,6 +7,6 @@ edition = "2021"
 
 [dependencies]
 dasp_sample = "0.11.0"
-dasp_signal = { version = "0.11.0", feature = "interpolate" }
-dasp_interpolate = { version = "0.11.0", feature = "linear" }
+dasp_signal = { version = "0.11.0" }
+dasp_interpolate = { version = "0.11.0", features = ["linear"] }
 hound = "*"

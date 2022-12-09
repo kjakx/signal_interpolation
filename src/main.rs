@@ -4,9 +4,9 @@ use dasp_interpolate::linear::Linear;
 use hound;
 
 fn main() {
-    let mut signal = signal::rate(44100.0).const_hz(440.0).sine();
-    let mut interp = Linear::new(0.0_f32, 0.0_f32);
-    let mut converted = Converter::from_hz_to_hz(signal, interp, 440.0, 523.25).into_source();
+    let signal = signal::rate(44100.0).const_hz(440.0).sine();
+    let interp = Linear::new(0.0, 0.0);
+    let mut converted = Converter::scale_playback_hz(signal, interp, 523.25/440.0);
     let spec = hound::WavSpec {
         channels: 1,
         sample_rate: 44100,

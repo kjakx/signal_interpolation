@@ -1,0 +1,12 @@
+[package]
+name = "sig_interp"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+dasp_sample = "0.11.0"
+dasp_signal = { version = "0.11.0", feature = "interpolate" }
+dasp_interpolate = { version = "0.11.0", feature = "linear" }
+hound = "*"
